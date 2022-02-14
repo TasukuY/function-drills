@@ -342,14 +342,10 @@ toUppercase(sampleString);
 
 //CODE HERE
 let emailCheck = (email) => {
-  let emailArr = String(email).split('');
+  
   //trim off any excess whitespace
-  for(let i = 0; i < emailArr.length; i++){
-    if(emailArr[i] === ' '){
-      emailArr.splice(i, 1);
-    }
-  }
-  console.log(emailArr)
+  email.trim();
+
   if(emailArr.indexOf('@') !== -1){
     return 'email verified';
   }else{
