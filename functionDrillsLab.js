@@ -39,7 +39,7 @@ console.log(jsNinja());
 */
 
 //CODE HERE
-let printName = (name) => {
+let printName = name => {
   console.log(name);
 }
 
@@ -146,7 +146,7 @@ let prob8Answer = 'arrow';
   Brownie points if you use a template string
 */
 
-const exclaimThree = (str) => `${str.toUpperCase()}!!!`;
+const exclaimThree = str => `${str.toUpperCase()}!!!`;
 console.log(exclaimThree('abc'));
 
 ////////////////// PROBLEM 9 ////////////////////
@@ -230,7 +230,14 @@ let printAllNames = (arr) => {
   });
 }
 
+// let test = arr => {
+//   for(name in arr){
+//     console.log(name);
+//   }
+// }
+
 printAllNames(namesArr);
+//test(namesArr);
 
 ////////////////// PROBLEM 13 ////////////////////
 /*
@@ -344,9 +351,10 @@ toUppercase(sampleString);
 let emailCheck = (email) => {
   
   //trim off any excess whitespace
+  email = String(email);
   email.trim();
 
-  if(emailArr.indexOf('@') !== -1){
+  if(email.indexOf('@') !== -1){
     return 'email verified';
   }else{
     return 'must provide a valid email address';
@@ -449,20 +457,20 @@ function pond() {
 
 //This array should contain the variable names (as strings) accessible in the global scope.
 let globalScope = []
-globalScope.push(duck);
+globalScope.push('duck');
 
 //This array should contain the variable names (as strings) accessible in the bathroom function.
 let bathroomScope = []
-bathroomScope.push(duck);
-bathroomScope.push(rubberDuck);
+bathroomScope.push('duck');
+bathroomScope.push('rubberDuck');
 //bathroomScope.push(sailorDuck); -> make it clear if inside of the bathtub func is considered as insde of the bathroom func. 
 
 //This array should contain the variable names (as strings) accessible in the bathtub function.
 let bathtubScope = []
-bathtubScope.push(duck);
-bathtubScope.push(sailorDuck);
+bathtubScope.push('duck');
+bathtubScope.push('sailorDuck');
 
 //This array should contain the variable names (as strings) accessible in the pond function.
 let pondScope = []
-pondScope.push(duck);
-pondScope.push(realDuck);
+pondScope.push('duck');
+pondScope.push('realDuck');
