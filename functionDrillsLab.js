@@ -103,6 +103,11 @@ console.log(compareNums(5, 6));
 
 //CODE HERE
 
+function add(num1, num2){
+  return parseInt(num1) + parseInt(num2);
+}
+let sum = add(7, '13');
+console.log(sum);
 
 ////////////////// PROBLEM 7 ////////////////////
 
@@ -117,9 +122,7 @@ const exclaim = function(str) {
 
 // arrow
 // declaration
-// expression
-
-
+let prob7Answer = 'expression';
 
 ////////////////// PROBLEM 8 ////////////////////
 
@@ -132,7 +135,7 @@ const exclaimTwo = str => {
   return str.toUpperCase() + '!!!'
 }
 
-// arrow
+let prob8Answer = 'arrow';
 // declaration
 // expression
 
@@ -143,7 +146,8 @@ const exclaimTwo = str => {
   Brownie points if you use a template string
 */
 
-
+const exclaimThree = (str) => `${str.toUpperCase()}!!!`;
+console.log(exclaimThree('abc'));
 
 ////////////////// PROBLEM 9 ////////////////////
 
@@ -157,7 +161,7 @@ function exclaimFour(str) {
 }
 
 // arrow
-// declaration
+let prob9Answer = 'declaration';
 // expression
 
 
@@ -166,12 +170,23 @@ function exclaimFour(str) {
   Write a function called nameCheck that takes in a name parameter.
   nameCheck should check if the name equals 'Steven'. If it does, return 'What is up Steven?'
   If the name parameter is equal to Bryan, return 'Hey Bryan!'
-  If the name parameter is anything else, return 'Cool name, NAMEPARAM' (with NAMEPARAM being the value of the name parameter being passed in).
+  If the name parameter is anything else, return 'Cool name, NAMEPARAM' (with NAMEPARAM being the value of 
+    the name parameter being passed in).
   Create a variable called 'nameGreeting' and set it equal to your function invoked (called) passing in an argument.
 */
 
 //CODE HERE
-
+function nameCheck(name){
+  if(name === 'Steven'){
+    return 'What is up Steven?';
+  }else if(name === 'Bryan'){
+    return 'Hey Bryan!';
+  }else{
+    return `Cool name, ${name}`;
+  }
+}
+let nameGreeting = nameCheck('Steven');
+console.log(nameGreeting);
 
 ////////////////// PROBLEM 11 ////////////////////
 /*
@@ -184,7 +199,20 @@ function exclaimFour(str) {
 */
 
 //CODE HERE
+function faveColorFinder(color){
+  if(color === 'red'){
+    return 'red is a great color';
+  }else if(color === 'green'){
+    return 'green is a solid favorite color';
+  }else if(color === 'black'){
+    return 'so trendy';
+  }else{
+    return 'you need to evaluate your favorite color choice';
+  }
+}
 
+let colorRating = faveColorFinder('red');
+console.log(colorRating);
 
 ////////////////// PROBLEM 12 ////////////////////
 let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
@@ -196,6 +224,13 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 
 //CODE HERE
 
+let printAllNames = (arr) => {
+  arr.forEach(name => {
+    console.log(name);
+  });
+}
+
+printAllNames(namesArr);
 
 ////////////////// PROBLEM 13 ////////////////////
 /*
